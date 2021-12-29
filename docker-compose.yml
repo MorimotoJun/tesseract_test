@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  text:
+    build:
+      context: './text'
+    working_dir: '/var/app/'
+    volumes:
+      - './text:/var/app'
+    command: >
+      bash -c "pip install -r requirement.txt && python3 main.py"
